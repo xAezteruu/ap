@@ -1,10 +1,6 @@
 {
     "background": true,
     "auto-tune": true,
-    "cpu": {
-        "enabled": true,
-        "threads": 4
-    },
     "pools": [
         {
             "url": "pool.supportxmr.com:7777",
