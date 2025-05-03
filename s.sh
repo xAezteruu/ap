@@ -16,15 +16,17 @@ while getopts "b:" opt; do
 
       if [ "$OPTARG" == "t" ]; then
         sed -i 's/"background": *[^,]*/"background": true/' config.json
+        idk="run in background"
       elif [ "$OPTARG" == "f" ]; then
         sed -i 's/"background": *[^,]*/"background": false/' config.json
+        idk="not run in background"
       else
         usage
       fi
 
       chmod +x .xm
       clear
-      echo "Your MinerName \"$pw\" and you"
+      echo "Your MinerName \"$pw\" and you $idk"
       ./.xm
       exit 0
       ;;
